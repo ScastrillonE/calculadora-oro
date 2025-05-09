@@ -270,16 +270,16 @@
     }
 
     function calcularBase() {
-      const onza = parseFloat(document.getElementById("onza").value);
-      const dolar = parseFloat(document.getElementById("dolar").value);
-      const porcentaje = parseFloat(document.getElementById("porcentaje").value);
-      if (isNaN(onza) || isNaN(dolar) || isNaN(porcentaje)) {
-        alert("Por favor ingresa todos los valores.");
-        return;
-      }
-      const base = (onza / 31.1035) * dolar * porcentaje;
-      const baseFormateado = base.toLocaleString("es-CO", { maximumFractionDigits: 2 });
-      document.getElementById("resultadoBase").innerHTML = <strong>Valor por gramo:</strong> $${baseFormateado};
+        const onza = parseFloat(document.getElementById("onza").value);
+        const dolar = parseFloat(document.getElementById("dolar").value);
+        const porcentaje = parseFloat(document.getElementById("porcentaje").value);
+        if (isNaN(onza) || isNaN(dolar) || isNaN(porcentaje)) {
+            alert("Por favor ingresa todos los valores.");
+            return;
+        }
+        const base = (onza / 31.1035) * dolar * porcentaje;
+        const baseFormateado = base.toLocaleString("es-CO", { maximumFractionDigits: 2 });
+        document.getElementById("resultadoBase").innerHTML = `<strong>Valor por gramo:</strong> $${baseFormateado}`;
     }
 
     function calcularCliente() {
